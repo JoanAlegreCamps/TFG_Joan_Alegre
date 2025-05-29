@@ -33,7 +33,7 @@ mtDNA-aging-pipeline/
 ```bash
 git clone https://github.com/yourusername/mtDNA-aging-pipeline.git
 cd mtDNA-aging-pipeline
-
+exit
 2. Install dependencies:
 pip install -r requirements.txt
 
