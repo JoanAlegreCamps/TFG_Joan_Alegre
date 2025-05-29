@@ -30,10 +30,10 @@ mtDNA-aging-pipeline/
 ### Setup
 
 1. Clone the repository:
-```bash
+
 git clone https://github.com/yourusername/mtDNA-aging-pipeline.git
 cd mtDNA-aging-pipeline
-```bash
+
 2. Install dependencies:
 pip install -r requirements.txt
 
