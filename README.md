@@ -25,3 +25,12 @@ The project includes:
 ```bash
 git clone https://github.com/yourusername/mtDNA-aging-pipeline.git
 cd mtDNA-aging-pipeline
+
+**Manual tracking with Fiji (macro)**
+To manually extract fluorescence intensity from mother cells across time:
+
+1. Open your time-lapse .tif file in Fiji.
+2. Use the ROI Tool to draw a selection around the cell.
+3. Run the macro macros/track_cell_macro.ijm (from Plugins > Macros > Run).
+      This will automatically measure green (channel 2) and red (channel 3) fluorescence for the selected ROI across all frames.
+4. Measurements will appear in the Results window and can be exported to .csv or .xlsx.
