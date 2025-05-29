@@ -44,7 +44,7 @@ mtDNA-aging-pipeline/
    Plugins > Macros > Run...
 
 
-**Example Usage**
+### Example Usage
 
 1. Subtract background from multi-channel .tif
    ```bash
