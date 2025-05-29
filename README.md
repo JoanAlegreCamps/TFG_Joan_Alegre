@@ -1,37 +1,85 @@
-# TFG_Joan_Alegre -> mtDNA-aging-pipeline
+# mtDNA-aging-pipeline
 
-This repository contains the code developed for a Bachelor's Thesis project focused on analyzing mitochondrial DNA (mtDNA) dynamics during replicative aging in *Saccharomyces cerevisiae*. The workflow combines microfluidic time-lapse fluorescence microscopy with semi-automated image processing and quantification tools.
+This repository contains the code and macros developed for a Bachelor's Thesis project on analyzing mitochondrial DNA (mtDNA) dynamics during replicative aging in *Saccharomyces cerevisiae*. The project combines long-term fluorescence microscopy in microfluidic devices with semi-automated image processing.
 
-## Project Overview
+## 🔍 Overview
 
-The main objective of this project was to build a reproducible, semi-automated analysis pipeline that simplifies the quantification of mitochondrial and mtDNA fluorescence over time in individual yeast cells. The tools developed here are intended to support future biological studies on mitochondrial inheritance, aging, and cell cycle dynamics.
+The main goal is to extract and analyze fluorescence intensity from mitochondrial membranes and mtDNA in single yeast cells over time. This analysis was initially performed manually in Fiji but has been progressively optimized using macros and Python scripts.
 
-The project includes:
-- Python scripts for background subtraction and fluorescence data processing.
-- Fiji macros for semi-manual cell tracking and measurement.
-- Integration with Cell-ACDC for segmentation and tracking based on the BABY model.
+## 📁 Repository Structure
+mtDNA-aging-pipeline/
+├── src/ # Python scripts
+│ ├── background_subtraction.py
+│ └── fluorescence_quantification.py
+├── macros/ # Fiji macros
+│ ├── track_cell_macro.ijm
+│ ├── measure_intensity_over_time.ijm
+│ └── measure_all_rois_over_time.ijm
+├── example_data/ # Example .tif and .xlsx files (if provided)
+├── requirements.txt
+└── README.md
 
-## Installation Requirements
+## ⚙️ Installation
 
 ### Prerequisites
 
-- Python 3.8 or higher  
-- Fiji/ImageJ (https://imagej.net/software/fiji/)  
-- Git  
+- Python 3.8+
+- [Fiji / ImageJ](https://imagej.net/software/fiji/)
+- Git
 
-### Installing the pipeline
+### Setup
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/mtDNA-aging-pipeline.git
 cd mtDNA-aging-pipeline
 
-###
-**Manual tracking with Fiji (macro)**
-To manually extract fluorescence intensity from mother cells across time:
+2. Install dependencies:
+pip install -r requirements.txt
 
-1. Open your time-lapse .tif file in Fiji.
-2. Use the ROI Tool to draw a selection around the cell.
-3. Run the macro macros/track_cell_macro.ijm (from Plugins > Macros > Run).
-      This will automatically measure green (channel 2) and red (channel 3) fluorescence for the selected ROI across all frames.
-4. Measurements will appear in the Results window and can be exported to .csv or .xlsx.
+3. Open Fiji and run the macros from the macros/ folder via:
+Plugins > Macros > Run...
+
+
+**Example Usage**
+
+1. Subtract background from multi-channel .tif
+python src/background_subtraction.py
+This script loads a .tif file, subtracts a background value from green and red channels, and saves the corrected image.
+
+2. Track a single ROI with Fiji
+Use the track_cell_macro.ijm macro to:
+
+Measure fluorescence in green and red channels (channels 2 and 3).
+
+Track intensity of one ROI through all frames.
+
+3. Measure ROI over time
+Use measure_intensity_over_time.ijm to:
+
+Measure the selected ROI in each timepoint (e.g., over 90 frames).
+
+Use measure_all_rois_over_time.ijm to:
+
+Automatically loop over all saved ROIs and extract intensity values frame-by-frame.
+
+4. Clean up and separate fluorescence measurements (Python)
+python src/fluorescence_quantification.py
+This script processes the raw .xlsx file exported from Fiji, separates values into green/red channels (based on even/odd rows), and saves a clean version of the dataset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
