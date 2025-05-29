@@ -11,7 +11,7 @@ The project includes:
 - Fiji macros for semi-manual cell tracking and measurement.
 - Integration with Cell-ACDC for segmentation and tracking based on the BABY model.
 
-## ⚙Installation Requirements
+## Installation Requirements
 
 ### Prerequisites
 
@@ -26,6 +26,7 @@ The project includes:
 git clone https://github.com/yourusername/mtDNA-aging-pipeline.git
 cd mtDNA-aging-pipeline
 
+###
 **Manual tracking with Fiji (macro)**
 To manually extract fluorescence intensity from mother cells across time:
 
