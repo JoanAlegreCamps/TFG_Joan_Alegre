@@ -44,17 +44,19 @@ Plugins > Macros > Run...
 **Example Usage**
 
 1. Subtract background from multi-channel .tif
+   ```bash
     python src/background_subtraction.py
+   ```
     This script loads a .tif file, subtracts a background value from green and red channels, and saves the corrected image.
 
-2. Track a single ROI with Fiji
+3. Track a single ROI with Fiji
     Use the track_cell_macro.ijm macro to:
 
     Measure fluorescence in green and red channels (channels 2 and 3).
 
     Track intensity of one ROI through all frames.
 
-3. Measure ROI over time
+4. Measure ROI over time
     Use measure_intensity_over_time.ijm to:
 
     Measure the selected ROI in each timepoint (e.g., over 90 frames).
@@ -63,7 +65,7 @@ Plugins > Macros > Run...
 
     Automatically loop over all saved ROIs and extract intensity values frame-by-frame.
 
-4. Clean up and separate fluorescence measurements (Python)
+5. Clean up and separate fluorescence measurements (Python)
    
     python src/fluorescence_quantification.py
    
