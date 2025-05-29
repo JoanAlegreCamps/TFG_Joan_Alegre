@@ -50,19 +50,21 @@ mtDNA-aging-pipeline/
    ```
     This script loads a .tif file, subtracts a background value from green and red channels, and saves the corrected image.
 
-3. Track a single ROI with Fiji
+2. Track a single ROI with Fiji
    
     Use the track_cell_macro.ijm macro to:
 
-   Measure fluorescence in green and red channels (channels 2 and 3) Use track_cell_macro.jim to measure and save the ROIs
+3. Measure fluorescence in green and red channels (channels 2 and 3)
+   
+    Use track_cell_macro.jim to measure and save the ROIs
 
-5. Measure ROI over time
+4. Measure ROI over time
    
     Use measure_intensity_over_time.ijm to measure the selected ROI in each timepoint (e.g., over 90 frames).
 
     Use measure_all_rois_over_time.ijm to automatically loop over all saved ROIs and extract intensity values frame-by-frame.
 
-7. Clean up and separate fluorescence measurements (Python)
+5. Clean up and separate fluorescence measurements (Python)
     ```bash
     python src/fluorescence_quantification.py
     ```
