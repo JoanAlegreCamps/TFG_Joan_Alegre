@@ -2,11 +2,11 @@
 
 This repository contains the code and macros developed for a Bachelor's Thesis project on analyzing mitochondrial DNA (mtDNA) dynamics during replicative aging in *Saccharomyces cerevisiae*. The project combines long-term fluorescence microscopy in microfluidic devices with semi-automated image processing.
 
-## 🔍 Overview
+## Overview
 
 The main goal is to extract and analyze fluorescence intensity from mitochondrial membranes and mtDNA in single yeast cells over time. This analysis was initially performed manually in Fiji but has been progressively optimized using macros and Python scripts.
 
-## 📁 Repository Structure
+## Repository Structure
 mtDNA-aging-pipeline/
 ├── src/ # Python scripts
 │ ├── background_subtraction.py
@@ -19,7 +19,7 @@ mtDNA-aging-pipeline/
 ├── requirements.txt
 └── README.md
 
-## ⚙️ Installation
+## ⚙Installation
 
 ### Prerequisites
 
@@ -30,7 +30,6 @@ mtDNA-aging-pipeline/
 ### Setup
 
 1. Clone the repository:
-
    git clone https://github.com/yourusername/mtDNA-aging-pipeline.git
    cd mtDNA-aging-pipeline
 
@@ -54,16 +53,12 @@ mtDNA-aging-pipeline/
 3. Track a single ROI with Fiji
     Use the track_cell_macro.ijm macro to:
 
-          Measure fluorescence in green and red channels (channels 2 and 3) Use track_cell_macro.jim to measure and save the ROIs
+   Measure fluorescence in green and red channels (channels 2 and 3) Use track_cell_macro.jim to measure and save the ROIs
 
 4. Measure ROI over time
-    Use measure_intensity_over_time.ijm to:
+    Use measure_intensity_over_time.ijm to measure the selected ROI in each timepoint (e.g., over 90 frames).
 
-          Measure the selected ROI in each timepoint (e.g., over 90 frames).
-
-    Use measure_all_rois_over_time.ijm to:
-
-          Automatically loop over all saved ROIs and extract intensity values frame-by-frame.
+    Use measure_all_rois_over_time.ijm to automatically loop over all saved ROIs and extract intensity values frame-by-frame.
 
 5. Clean up and separate fluorescence measurements (Python)
     ```bash
