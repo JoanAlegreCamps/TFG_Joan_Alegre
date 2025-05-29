@@ -58,7 +58,7 @@ mtDNA-aging-pipeline/
 
 3. Measure fluorescence in green and red channels (channels 2 and 3)
    
-    Use track_cell_macro.jim to measure and save the ROIs
+    Use track_cell_macro.ijm to measure and save the ROIs
 
 4. Measure ROI over time
    
