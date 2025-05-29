@@ -17,7 +17,6 @@ mtDNA-aging-pipeline/
 │ ├── track_cell_macro.ijm
 │ ├── measure_intensity_over_time.ijm
 │ └── measure_all_rois_over_time.ijm
-├── example_data/ # Example .tif and .xlsx files (if provided)
 ├── requirements.txt
 └── README.md
 ```
