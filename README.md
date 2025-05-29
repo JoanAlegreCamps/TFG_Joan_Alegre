@@ -31,14 +31,16 @@ mtDNA-aging-pipeline/
 
 1. Clone the repository:
 
-git clone https://github.com/yourusername/mtDNA-aging-pipeline.git
-cd mtDNA-aging-pipeline
+   git clone https://github.com/yourusername/mtDNA-aging-pipeline.git
+   cd mtDNA-aging-pipeline
 
 2. Install dependencies:
-pip install -r requirements.txt
-
-3. Open Fiji and run the macros from the macros/ folder via:
-Plugins > Macros > Run...
+   ```bash
+   pip install -r requirements.txt
+   ```
+   
+4. Open Fiji and run the macros from the macros/ folder via:
+   Plugins > Macros > Run...
 
 
 **Example Usage**
@@ -52,18 +54,16 @@ Plugins > Macros > Run...
 3. Track a single ROI with Fiji
     Use the track_cell_macro.ijm macro to:
 
-    Measure fluorescence in green and red channels (channels 2 and 3).
-
-    Track intensity of one ROI through all frames.
+          Measure fluorescence in green and red channels (channels 2 and 3) Use track_cell_macro.jim to measure and save the ROIs
 
 4. Measure ROI over time
     Use measure_intensity_over_time.ijm to:
 
-    Measure the selected ROI in each timepoint (e.g., over 90 frames).
+          Measure the selected ROI in each timepoint (e.g., over 90 frames).
 
     Use measure_all_rois_over_time.ijm to:
 
-    Automatically loop over all saved ROIs and extract intensity values frame-by-frame.
+          Automatically loop over all saved ROIs and extract intensity values frame-by-frame.
 
 5. Clean up and separate fluorescence measurements (Python)
     ```bash
