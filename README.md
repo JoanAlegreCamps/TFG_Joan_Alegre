@@ -38,7 +38,7 @@ mtDNA-aging-pipeline/
    pip install -r requirements.txt
    ```
    
-4. Open Fiji and run the macros from the macros/ folder via:
+3. Open Fiji and run the macros from the macros/ folder via:
    Plugins > Macros > Run...
 
 
