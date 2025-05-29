@@ -7,6 +7,8 @@ This repository contains the code and macros developed for a Bachelor's Thesis p
 The main goal is to extract and analyze fluorescence intensity from mitochondrial membranes and mtDNA in single yeast cells over time. This analysis was initially performed manually in Fiji but has been progressively optimized using macros and Python scripts.
 
 ## Repository Structure
+
+```bash
 mtDNA-aging-pipeline/
 ├── src/ # Python scripts
 │ ├── background_subtraction.py
@@ -18,8 +20,9 @@ mtDNA-aging-pipeline/
 ├── example_data/ # Example .tif and .xlsx files (if provided)
 ├── requirements.txt
 └── README.md
+```
 
-## ⚙Installation
+## Installation
 
 ### Prerequisites
 
@@ -69,20 +72,3 @@ mtDNA-aging-pipeline/
     python src/fluorescence_quantification.py
     ```
     This script processes the raw .xlsx file exported from Fiji, separates values into green/red channels (based on even/odd rows), and saves a clean version of the dataset.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
