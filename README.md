@@ -66,9 +66,9 @@ Plugins > Macros > Run...
     Automatically loop over all saved ROIs and extract intensity values frame-by-frame.
 
 5. Clean up and separate fluorescence measurements (Python)
-   
+    ```bash
     python src/fluorescence_quantification.py
-   
+    ```
     This script processes the raw .xlsx file exported from Fiji, separates values into green/red channels (based on even/odd rows), and saves a clean version of the dataset.
 
 
