@@ -1,9 +1,9 @@
-from tifffile import imread, imsave
-import os
-
-# Define input and output files
-input_file = os.path.join("example_data", "A2-green.tif")
-output_file = os.path.join("example_data", "A2-green_corrected.tif")
+#Read the image
+from tifffile import imread, imsave, imwrite
+import numpy as np
+pathfile=
+savefile=
+img = imread(pathfile)
 
 # Read the image
 img = imread(input_file)
@@ -19,6 +19,8 @@ img[:, 2, :, :] -= Bkg_red
 
 # Clamp negative values to zero
 img[img < 0] = 0
+# convert back to save
+img = img.astype(np.uint16)  
 
 # Save corrected image
-imsave(output_file, img)
+imwrite(savefile, img, imagej=True)
